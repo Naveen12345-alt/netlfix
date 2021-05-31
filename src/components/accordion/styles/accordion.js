@@ -1,13 +1,13 @@
-import styled from 'styled-components/macro';
+import styled from 'styled-components/macro'
 
 export const Container = styled.div`
   display: flex;
   border-bottom: 8px solid #222;
-`;
+`
 
 export const Frame = styled.div`
   margin-bottom: 40px;
-`;
+`
 
 export const Item = styled.div`
   color: white;
@@ -23,7 +23,7 @@ export const Item = styled.div`
   @media (max-width: 600px) {
     max-width: 360px;
   }
-`;
+`
 
 export const Header = styled.div`
   display: flex;
@@ -46,7 +46,7 @@ export const Header = styled.div`
       font-size:16px;
     }
   }
-`;
+`
 
 export const Inner = styled.div`
   display: flex;
@@ -54,7 +54,7 @@ export const Inner = styled.div`
   flex-direction: column;
   max-width: 815px;
   margin: auto;
-`;
+`
 
 export const Title = styled.h1`
   font-size: 45px;
@@ -67,7 +67,7 @@ export const Title = styled.h1`
   @media (max-width: 600px) {
     font-size: 27px;
   }
-`;
+`
 
 export const Body = styled.div`
   max-height: 1200px;
@@ -84,4 +84,4 @@ export const Body = styled.div`
     font-size: 16px;
     line-height: 22px;
   }
-`;
+`

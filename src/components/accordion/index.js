@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import {
   Body,
   Container,
@@ -7,27 +7,27 @@ import {
   Inner,
   Item,
   Title,
-} from './styles/accordion';
+} from './styles/accordion'
 
 export default function Accordion({ children, ...restProps }) {
   return (
     <Container {...restProps}>
       <Inner>{children}</Inner>
     </Container>
-  );
+  )
 }
 
 Accordion.Title = function AccordionTitle({ children, ...restProps }) {
-  return <Title {...restProps}>{children}</Title>;
-};
+  return <Title {...restProps}>{children}</Title>
+}
 
 Accordion.Frame = function AccordionFrame({ children, ...restProps }) {
-  return <Frame {...restProps}>{children}</Frame>;
-};
+  return <Frame {...restProps}>{children}</Frame>
+}
 
 Accordion.Item = function AccordionItem({ children, ...restProps }) {
-  return <Item {...restProps}>{children}</Item>;
-};
+  return <Item {...restProps}>{children}</Item>
+}
 
 Accordion.Header = function AccordionHeader({ children, ...restProps }) {
   return (
@@ -39,9 +39,9 @@ Accordion.Header = function AccordionHeader({ children, ...restProps }) {
         <img src="/images/icons/add.png" alt="Open" />
       )}
     </Header>
-  );
-};
+  )
+}
 
 Accordion.Body = function AccordionBody({ children, ...restProps }) {
-  return <Body {...restProps}>{children}</Body>;
-};
+  return <Body {...restProps}>{children}</Body>
+}

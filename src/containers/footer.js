@@ -1,5 +1,5 @@
-import React from 'react';
-import { Footer } from '../components';
+import React from 'react'
+import { Footer } from '../components'
 
 export function FooterContainer() {
   return (
@@ -36,5 +36,5 @@ export function FooterContainer() {
       <Footer.Break />
       <Footer.Text>Netflix India</Footer.Text>
     </Footer>
-  );
+  )
 }

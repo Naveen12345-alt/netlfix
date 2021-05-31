@@ -1,5 +1,5 @@
-import styled from 'styled-components/macro';
-import { Link as ReactRouterLink } from 'react-router-dom';
+import styled from 'styled-components/macro'
+import { Link as ReactRouterLink } from 'react-router-dom'
 
 export const Background = styled.div`
   display: flex;
@@ -7,9 +7,9 @@ export const Background = styled.div`
   background: url(${({ src }) =>
       src ? `../images/misc/${src}.jpg` : '../images/misc/home-bg.jpg'})
     top left / cover no-repeat;
-`;
+`
 
-export const Frame = styled.div``;
+export const Frame = styled.div``
 
 export const Container = styled.div`
   display: flex;
@@ -26,7 +26,7 @@ export const Container = styled.div`
   @media (max-width: 1000px) {
     margin: 0 30px;
   }
-`;
+`
 
 export const Logo = styled.img`
   height: 32px;
@@ -37,7 +37,7 @@ export const Logo = styled.img`
     height: 45px;
     width: 167px;
   }
-`;
+`
 
 export const ButtonLink = styled(ReactRouterLink)`
   display: block;
@@ -56,4 +56,4 @@ export const ButtonLink = styled(ReactRouterLink)`
   &:hover {
     background-color: #f40612;
   }
-`;
+`

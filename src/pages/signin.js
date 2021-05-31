@@ -1,21 +1,21 @@
-import React, { useState, useContext } from 'react';
-import { useHistory } from 'react-router-dom';
-import { FirebaseContext } from '../context/firebase';
-import { FooterContainer } from '../containers/footer';
-import { HeaderContainer } from '../containers/header';
-import { Form } from '../components';
-import * as ROUTES from '../constants/routes';
+import React, { useState, useContext } from 'react'
+import { useHistory } from 'react-router-dom'
+import { FirebaseContext } from '../context/firebase'
+import { FooterContainer } from '../containers/footer'
+import { HeaderContainer } from '../containers/header'
+import { Form } from '../components'
+import * as ROUTES from '../constants/routes'
 
 export default function Signin() {
-  const history = useHistory();
-  const { firebase } = useContext(FirebaseContext);
-  const [emailAddress, setEmailAddress] = useState('');
-  const [error, setError] = useState('');
-  const [password, setPassword] = useState('');
+  const history = useHistory()
+  const { firebase } = useContext(FirebaseContext)
+  const [emailAddress, setEmailAddress] = useState('')
+  const [error, setError] = useState('')
+  const [password, setPassword] = useState('')
 
-  const isInvalid = password === '' || emailAddress === '';
+  const isInvalid = password === '' || emailAddress === ''
   const handleSignin = (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
     // firebase work here!
     firebase
@@ -23,17 +23,17 @@ export default function Signin() {
       .signInWithEmailAndPassword(emailAddress, password)
       .then(() => {
         //  push to the browse page
-        history.push(ROUTES.BROWSE);
+        history.push(ROUTES.BROWSE)
       })
       .catch((error) => {
-        setEmailAddress('');
-        setPassword('');
-        setError(error.message);
-      });
-  };
+        setEmailAddress('')
+        setPassword('')
+        setError(error.message)
+      })
+  }
 
   return (
-    <>
+    <React.Fragment>
       <HeaderContainer>
         <Form>
           <Form.Title>Sign In</Form.Title>
@@ -66,6 +66,6 @@ export default function Signin() {
         </Form>
       </HeaderContainer>
       <FooterContainer />
-    </>
-  );
+    </React.Fragment>
+  )
 }

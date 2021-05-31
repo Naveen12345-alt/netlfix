@@ -2,11 +2,11 @@ export function seedDatabase(firebase) {
   function getUUID() {
     // eslint gets funny about bitwise
     /* eslint-disable */
-    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
-      const piece = (Math.random() * 16) | 0;
-      const elem = c === 'x' ? piece : (piece & 0x3) | 0x8;
-      return elem.toString(16);
-    });
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => {
+      const piece = (Math.random() * 16) | 0
+      const elem = c === 'x' ? piece : (piece & 0x3) | 0x8
+      return elem.toString(16)
+    })
     /* eslint-enable */
   }
 
@@ -21,7 +21,7 @@ export function seedDatabase(firebase) {
     genre: 'documentaries',
     maturity: '18',
     slug: 'tiger-king',
-  });
+  })
   firebase.firestore().collection('series').add({
     id: getUUID(),
     title: 'Amanda Knox',
@@ -30,7 +30,7 @@ export function seedDatabase(firebase) {
     genre: 'documentaries',
     maturity: '12',
     slug: 'amanda-knox',
-  });
+  })
   firebase.firestore().collection('series').add({
     id: getUUID(),
     title: 'Citizenfour',
@@ -39,7 +39,7 @@ export function seedDatabase(firebase) {
     genre: 'documentaries',
     maturity: '12',
     slug: 'citizenfour',
-  });
+  })
   firebase.firestore().collection('series').add({
     id: getUUID(),
     title: 'Super Size Me',
@@ -48,7 +48,7 @@ export function seedDatabase(firebase) {
     genre: 'documentaries',
     maturity: '12',
     slug: 'super-size-me',
-  });
+  })
   firebase.firestore().collection('series').add({
     id: getUUID(),
     title: 'Man on Wire',
@@ -57,7 +57,7 @@ export function seedDatabase(firebase) {
     genre: 'documentaries',
     maturity: '12',
     slug: 'man-on-wire',
-  });
+  })
 
   // Comedies
   firebase.firestore().collection('series').add({
@@ -68,7 +68,7 @@ export function seedDatabase(firebase) {
     genre: 'comedies',
     maturity: '15',
     slug: 'the-office',
-  });
+  })
   firebase.firestore().collection('series').add({
     id: getUUID(),
     title: 'Arrested Development',
@@ -77,7 +77,7 @@ export function seedDatabase(firebase) {
     genre: 'comedies',
     maturity: '15',
     slug: 'arrested-development',
-  });
+  })
   firebase.firestore().collection('series').add({
     id: getUUID(),
     title: 'Curb Your Enthusiasm',
@@ -86,7 +86,7 @@ export function seedDatabase(firebase) {
     genre: 'comedies',
     maturity: '15',
     slug: 'curb-your-enthusiasm',
-  });
+  })
   firebase.firestore().collection('series').add({
     id: getUUID(),
     title: 'Family Guy',
@@ -95,7 +95,7 @@ export function seedDatabase(firebase) {
     genre: 'comedies',
     maturity: '15',
     slug: 'family-guy',
-  });
+  })
   firebase.firestore().collection('series').add({
     id: getUUID(),
     title: 'South Park',
@@ -104,7 +104,7 @@ export function seedDatabase(firebase) {
     genre: 'comedies',
     maturity: '15',
     slug: 'south-park',
-  });
+  })
 
   // Children
   firebase.firestore().collection('series').add({
@@ -115,7 +115,7 @@ export function seedDatabase(firebase) {
     genre: 'children',
     maturity: '0',
     slug: 'peppa-pig',
-  });
+  })
   firebase.firestore().collection('series').add({
     id: getUUID(),
     title: 'Dora The Explorer',
@@ -124,7 +124,7 @@ export function seedDatabase(firebase) {
     genre: 'children',
     maturity: '0',
     slug: 'dora-the-explorer',
-  });
+  })
   firebase.firestore().collection('series').add({
     id: getUUID(),
     title: 'PAW Patrol',
@@ -133,7 +133,7 @@ export function seedDatabase(firebase) {
     genre: 'children',
     maturity: '0',
     slug: 'paw-patrol',
-  });
+  })
   firebase.firestore().collection('series').add({
     id: getUUID(),
     title: 'Arthur',
@@ -142,7 +142,7 @@ export function seedDatabase(firebase) {
     genre: 'children',
     maturity: '0',
     slug: 'arthur',
-  });
+  })
   firebase.firestore().collection('series').add({
     id: getUUID(),
     title: 'SpongeBob',
@@ -151,7 +151,7 @@ export function seedDatabase(firebase) {
     genre: 'children',
     maturity: '0',
     slug: 'spongebob',
-  });
+  })
 
   // Crime
   firebase.firestore().collection('series').add({
@@ -162,7 +162,7 @@ export function seedDatabase(firebase) {
     genre: 'crime',
     maturity: '18',
     slug: 'making-a-murderer',
-  });
+  })
   firebase.firestore().collection('series').add({
     id: getUUID(),
     title: 'Long Shot',
@@ -171,7 +171,7 @@ export function seedDatabase(firebase) {
     genre: 'crime',
     maturity: '18',
     slug: 'long-shot',
-  });
+  })
   firebase.firestore().collection('series').add({
     id: getUUID(),
     title: 'The Confession Killer',
@@ -180,7 +180,7 @@ export function seedDatabase(firebase) {
     genre: 'crime',
     maturity: '18',
     slug: 'the-confession-killer',
-  });
+  })
   firebase.firestore().collection('series').add({
     id: getUUID(),
     title: 'The Innocent Man',
@@ -189,7 +189,7 @@ export function seedDatabase(firebase) {
     genre: 'crime',
     maturity: '18',
     slug: 'the-innocent-man',
-  });
+  })
   firebase.firestore().collection('series').add({
     id: getUUID(),
     title: 'The Staircase',
@@ -198,7 +198,7 @@ export function seedDatabase(firebase) {
     genre: 'crime',
     maturity: '18',
     slug: 'the-staircase',
-  });
+  })
 
   // Feel-good
   firebase.firestore().collection('series').add({
@@ -209,7 +209,7 @@ export function seedDatabase(firebase) {
     genre: 'feel-good',
     maturity: '12',
     slug: 'good-will-hunting',
-  });
+  })
   firebase.firestore().collection('series').add({
     id: getUUID(),
     title: 'Forrest Gump',
@@ -218,7 +218,7 @@ export function seedDatabase(firebase) {
     genre: 'feel-good',
     maturity: '12',
     slug: 'forrest-gump',
-  });
+  })
   firebase.firestore().collection('series').add({
     id: getUUID(),
     title: 'Juno',
@@ -227,7 +227,7 @@ export function seedDatabase(firebase) {
     genre: 'feel-good',
     maturity: '12',
     slug: 'juno',
-  });
+  })
   firebase.firestore().collection('series').add({
     id: getUUID(),
     title: 'Midnight In Paris',
@@ -236,7 +236,7 @@ export function seedDatabase(firebase) {
     genre: 'feel-good',
     maturity: '12',
     slug: 'midnight-in-paris',
-  });
+  })
   firebase.firestore().collection('series').add({
     id: getUUID(),
     title: 'School of Rock',
@@ -245,7 +245,7 @@ export function seedDatabase(firebase) {
     genre: 'feel-good',
     maturity: '12',
     slug: 'school-of-rock',
-  });
+  })
 
   /* Films
     ============================================ */
@@ -258,7 +258,7 @@ export function seedDatabase(firebase) {
     genre: 'drama',
     maturity: '15',
     slug: 'the-prestige',
-  });
+  })
   firebase.firestore().collection('films').add({
     id: getUUID(),
     title: 'Fight Club',
@@ -267,7 +267,7 @@ export function seedDatabase(firebase) {
     genre: 'drama',
     maturity: '15',
     slug: 'fight-club',
-  });
+  })
   firebase.firestore().collection('films').add({
     id: getUUID(),
     title: 'Kings Speech',
@@ -276,7 +276,7 @@ export function seedDatabase(firebase) {
     genre: 'drama',
     maturity: '15',
     slug: 'kings-speech',
-  });
+  })
   firebase.firestore().collection('films').add({
     id: getUUID(),
     title: 'The Revenant',
@@ -285,7 +285,7 @@ export function seedDatabase(firebase) {
     genre: 'drama',
     maturity: '15',
     slug: 'the-revenant',
-  });
+  })
   firebase.firestore().collection('films').add({
     id: getUUID(),
     title: 'The Social Network',
@@ -294,7 +294,7 @@ export function seedDatabase(firebase) {
     genre: 'drama',
     maturity: '12',
     slug: 'the-social-network',
-  });
+  })
 
   // Suspense
   firebase.firestore().collection('films').add({
@@ -305,7 +305,7 @@ export function seedDatabase(firebase) {
     genre: 'suspense',
     maturity: '15',
     slug: 'shutter-island',
-  });
+  })
   firebase.firestore().collection('films').add({
     id: getUUID(),
     title: 'Gone Girl',
@@ -314,7 +314,7 @@ export function seedDatabase(firebase) {
     genre: 'suspense',
     maturity: '15',
     slug: 'gone-girl',
-  });
+  })
   firebase.firestore().collection('films').add({
     id: getUUID(),
     title: 'Prisoners',
@@ -323,7 +323,7 @@ export function seedDatabase(firebase) {
     genre: 'suspense',
     maturity: '15',
     slug: 'prisoners',
-  });
+  })
   firebase.firestore().collection('films').add({
     id: getUUID(),
     title: 'Seven',
@@ -332,7 +332,7 @@ export function seedDatabase(firebase) {
     genre: 'suspense',
     maturity: '15',
     slug: 'seven',
-  });
+  })
   firebase.firestore().collection('films').add({
     id: getUUID(),
     title: 'Zodiac',
@@ -341,7 +341,7 @@ export function seedDatabase(firebase) {
     genre: 'suspense',
     maturity: '15',
     slug: 'zodiac',
-  });
+  })
 
   // Children
   firebase.firestore().collection('films').add({
@@ -352,7 +352,7 @@ export function seedDatabase(firebase) {
     genre: 'children',
     maturity: '0',
     slug: 'hotel-transylvania',
-  });
+  })
   firebase.firestore().collection('films').add({
     id: getUUID(),
     title: 'Despicable Me',
@@ -361,7 +361,7 @@ export function seedDatabase(firebase) {
     genre: 'children',
     maturity: '0',
     slug: 'despicable-me',
-  });
+  })
   firebase.firestore().collection('films').add({
     id: getUUID(),
     title: 'Frozen',
@@ -370,7 +370,7 @@ export function seedDatabase(firebase) {
     genre: 'children',
     maturity: '0',
     slug: 'frozen',
-  });
+  })
   firebase.firestore().collection('films').add({
     id: getUUID(),
     title: 'Spirited Away',
@@ -379,7 +379,7 @@ export function seedDatabase(firebase) {
     genre: 'children',
     maturity: '0',
     slug: 'spirited-away',
-  });
+  })
   firebase.firestore().collection('films').add({
     id: getUUID(),
     title: 'Up',
@@ -388,7 +388,7 @@ export function seedDatabase(firebase) {
     genre: 'children',
     maturity: '0',
     slug: 'up',
-  });
+  })
 
   // Thriller
   firebase.firestore().collection('films').add({
@@ -399,7 +399,7 @@ export function seedDatabase(firebase) {
     genre: 'thriller',
     maturity: '15',
     slug: 'joker',
-  });
+  })
   firebase.firestore().collection('films').add({
     id: getUUID(),
     title: 'A Quiet Place',
@@ -408,7 +408,7 @@ export function seedDatabase(firebase) {
     genre: 'thriller',
     maturity: '15',
     slug: 'a-quiet-place',
-  });
+  })
   firebase.firestore().collection('films').add({
     id: getUUID(),
     title: 'Black Swan',
@@ -417,7 +417,7 @@ export function seedDatabase(firebase) {
     genre: 'thriller',
     maturity: '15',
     slug: 'black-swan',
-  });
+  })
   firebase.firestore().collection('films').add({
     id: getUUID(),
     title: 'Nightcrawler',
@@ -426,7 +426,7 @@ export function seedDatabase(firebase) {
     genre: 'thriller',
     maturity: '15',
     slug: 'nightcrawler',
-  });
+  })
   firebase.firestore().collection('films').add({
     id: getUUID(),
     title: 'The Silence of The Lambs',
@@ -435,7 +435,7 @@ export function seedDatabase(firebase) {
     genre: 'thriller',
     maturity: '15',
     slug: 'the-silence-of-the-lambs',
-  });
+  })
 
   // Romance
   firebase.firestore().collection('films').add({
@@ -446,7 +446,7 @@ export function seedDatabase(firebase) {
     genre: 'romance',
     maturity: '15',
     slug: 'a-star-is-born',
-  });
+  })
   firebase.firestore().collection('films').add({
     id: getUUID(),
     title: 'Blue Valentine',
@@ -455,7 +455,7 @@ export function seedDatabase(firebase) {
     genre: 'romance',
     maturity: '15',
     slug: 'blue-valentine',
-  });
+  })
   firebase.firestore().collection('films').add({
     id: getUUID(),
     title: 'La La Land',
@@ -464,7 +464,7 @@ export function seedDatabase(firebase) {
     genre: 'romance',
     maturity: '15',
     slug: 'la-la-land',
-  });
+  })
   firebase.firestore().collection('films').add({
     id: getUUID(),
     title: 'The Notebook',
@@ -473,7 +473,7 @@ export function seedDatabase(firebase) {
     genre: 'romance',
     maturity: '15',
     slug: 'the-notebook',
-  });
+  })
   firebase.firestore().collection('films').add({
     id: getUUID(),
     title: 'Titanic',
@@ -482,5 +482,5 @@ export function seedDatabase(firebase) {
     genre: 'romance',
     maturity: '15',
     slug: 'titanic',
-  });
+  })
 }

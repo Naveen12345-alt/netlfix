@@ -1,13 +1,13 @@
-import React from 'react';
-import { Feature, OptForm } from '../components';
-import { JumbotronContainer } from '../containers/jumbotron';
-import { FooterContainer } from '../containers/footer';
-import { FaqsContainer } from '../containers/faqs';
-import { HeaderContainer } from '../containers/header';
+import React from 'react'
+import { Feature, OptForm } from '../components'
+import { JumbotronContainer } from '../containers/jumbotron'
+import { FooterContainer } from '../containers/footer'
+import { FaqsContainer } from '../containers/faqs'
+import { HeaderContainer } from '../containers/header'
 
 export default function Home() {
   return (
-    <>
+    <React.Fragment>
       <HeaderContainer>
         <Feature>
           <Feature.Title>
@@ -30,6 +30,6 @@ export default function Home() {
       <JumbotronContainer />
       <FaqsContainer />
       <FooterContainer />
-    </>
-  );
+    </React.Fragment>
+  )
 }

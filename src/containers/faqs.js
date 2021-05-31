@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import { Accordion, OptForm } from '../components';
-import faqsData from '../fixtures/faqs.json';
+import React, { useState } from 'react'
+import { Accordion, OptForm } from '../components'
+import faqsData from '../fixtures/faqs.json'
 
 export function FaqsContainer() {
-  const [clicked, setClicked] = useState(false);
+  const [clicked, setClicked] = useState(false)
 
   const toggle = (index) => {
     if (clicked === index) {
-      return setClicked(null);
+      return setClicked(null)
     }
 
-    setClicked(index);
-  };
+    setClicked(index)
+  }
   return (
     <Accordion>
       <Accordion.Title>Frequently Asked Questions</Accordion.Title>
@@ -34,5 +34,5 @@ export function FaqsContainer() {
         </OptForm.Text>
       </OptForm>
     </Accordion>
-  );
+  )
 }
