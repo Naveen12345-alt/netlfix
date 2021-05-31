@@ -19,6 +19,7 @@ export default function Signup() {
 
   const handleSignup = (e) => {
     e.preventDefault()
+    const randomNumber = Math.floor(Math.random() * 5) + 1
 
     // do firebase stuff
     firebase
@@ -28,7 +29,7 @@ export default function Signup() {
         result.user
           .updateProfile({
             displayName: firstName,
-            photoUrl: Math.floor(Math.random() * 5) + 1,
+            photoURL: randomNumber,
           })
           .then(() => history.push(ROUTES.BROWSE))
       )

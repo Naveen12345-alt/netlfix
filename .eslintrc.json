@@ -24,6 +24,7 @@
     "semi": 0,
     "react-hooks/rules-of-hooks": "error",
     "no-debugger": 0,
+    "no-nested-ternary": 0,
     "no-alert": 0,
     "no-unused-vars": 1,
     "prefer-const": [
